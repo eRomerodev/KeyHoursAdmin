@@ -1,10 +1,6 @@
 # KeyHours - Frontend (Emiliano)
 
-## 🎯 Tu Responsabilidad
-
-Como parte del equipo de frontend, tu responsabilidad principal es trabajar en **componentes de estudiante** y **servicios**.
-
-## 📁 Archivos Principales que Tienes
+## 📁 Archivos Principales
 
 ### 🧩 Componentes de Estudiante (src/components/)
 - **`LoginForm.tsx`** - Formulario de login unificado
@@ -57,7 +53,7 @@ npm run build
 npm test
 ```
 
-## 📋 Tareas Sugeridas
+## 📋 Tareas a progresar
 
 1. **Mejorar UX de la experiencia de estudiante**
 2. **Optimizar formularios de aplicación**
@@ -71,5 +67,3 @@ Joshua está trabajando en **componentes principales** y **páginas de admin**. 
 - Consistencia en el diseño
 - Reutilización de componentes
 - Integración de servicios
-
-¡Tienes TODO el proyecto para trabajar! 🎉
