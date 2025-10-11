@@ -1,0 +1,399 @@
+.students-page {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.students-content {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+  min-height: calc(100vh - 80px);
+  display: flex;
+}
+
+.students-main {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.students-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.students-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.students-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.students-title {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 8px 16px;
+  gap: 8px;
+}
+
+.search-icon {
+  font-size: 16px;
+  color: var(--white);
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 14px;
+  outline: none;
+  flex: 1;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.home-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.home-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.home-icon {
+  font-size: 16px;
+}
+
+.students-main {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.table-title {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.details-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-blue);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.details-btn:hover {
+  background: #4a2c7a;
+}
+
+.details-icon {
+  font-size: 16px;
+}
+
+.students-table {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.table-header-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+.col-student {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.student-avatar {
+  width: 32px;
+  height: 32px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.student-name {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.col-hours,
+.col-project,
+.col-missing {
+  color: var(--black);
+  font-size: 14px;
+}
+
+.col-total {
+  display: flex;
+  align-items: center;
+}
+
+.completed-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-text {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.checkmark {
+  color: var(--success-green);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.status-label {
+  color: var(--success-green);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.progress-bar-container {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .students-content {
+    padding: 20px;
+  }
+  
+  .students-title {
+    font-size: 2rem;
+  }
+  
+  .students-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .table-header-row,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .col-header {
+    display: none;
+  }
+  
+  .table-row {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .col-student::before {
+    content: "Estudiante: ";
+    font-weight: 600;
+    color: var(--gray);
+  }
+  
+  .col-hours::before {
+    content: "Horas: ";
+    font-weight: 600;
+    color: var(--gray);
+  }
+  
+  .col-project::before {
+    content: "Proyecto: ";
+    font-weight: 600;
+    color: var(--gray);
+  }
+  
+  .col-total::before {
+    content: "Progreso: ";
+    font-weight: 600;
+    color: var(--gray);
+  }
+  
+  .col-missing::before {
+    content: "Faltantes: ";
+    font-weight: 600;
+    color: var(--gray);
+  }
+}
+
+@media (max-width: 480px) {
+  .students-content {
+    padding: 16px;
+  }
+  
+  .students-title {
+    font-size: 1.5rem;
+  }
+  
+  .students-main {
+    padding: 16px;
+  }
+  
+  .table-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Nuevos estilos para la gestión de estudiantes */
+.col-carnet,
+.col-email,
+.col-projects,
+.col-status,
+.col-actions {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.col-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.edit-btn {
+  background: var(--accent-blue);
+  color: var(--white);
+}
+
+.edit-btn:hover {
+  background: #1e2a4a;
+}
+
+.delete-btn {
+  background: #ff6b6b;
+  color: var(--white);
+}
+
+.delete-btn:hover {
+  background: #ff5252;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.active {
+  background: var(--success-green);
+  color: var(--white);
+}
+
+.status-badge.inactive {
+  background: #ff6b6b;
+  color: var(--white);
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 40px;
+  color: var(--white);
+  font-size: 16px;
+}
+
+.error-message {
+  color: #ff6b6b;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--white);
+}

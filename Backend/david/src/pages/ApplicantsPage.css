@@ -1,0 +1,239 @@
+.applicants-page {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.applicants-content {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+  min-height: calc(100vh - 80px);
+  padding: 32px;
+}
+
+.applicants-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.applicants-title {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+
+.applicants-title em {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.applicants-list {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  max-height: 60vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.applicant-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.applicant-item:last-child {
+  border-bottom: none;
+}
+
+.applicant-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.applicant-avatar {
+  width: 32px;
+  height: 32px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.applicant-name {
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.applicant-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.approve-btn,
+.reject-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.approve-btn {
+  background: var(--success-green);
+  color: var(--white);
+}
+
+.approve-btn:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+.reject-btn {
+  background: var(--error-red);
+  color: var(--white);
+}
+
+.reject-btn:hover {
+  background: #da190b;
+  transform: scale(1.05);
+}
+
+.applicants-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.back-icon {
+  font-size: 16px;
+}
+
+.publish-btn {
+  background: var(--accent-blue);
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.publish-btn:hover {
+  background: #4a2c7a;
+  transform: translateY(-1px);
+}
+
+.publish-btn:active {
+  transform: translateY(0);
+}
+
+/* Scrollbar styling */
+.applicants-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.applicants-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.applicants-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.applicants-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .applicants-content {
+    padding: 20px;
+  }
+  
+  .applicants-title {
+    font-size: 1.5rem;
+  }
+  
+  .applicants-list {
+    padding: 16px;
+  }
+  
+  .applicant-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .applicant-actions {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .applicants-content {
+    padding: 16px;
+  }
+  
+  .applicants-title {
+    font-size: 1.2rem;
+  }
+  
+  .applicants-list {
+    padding: 12px;
+  }
+  
+  .applicant-name {
+    font-size: 12px;
+  }
+  
+  .approve-btn,
+  .reject-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+  
+  .publish-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

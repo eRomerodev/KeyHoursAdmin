@@ -1,0 +1,73 @@
+/* Ocultar scrollbar globalmente para esta página */
+.profile-admin-page,
+.profile-admin-page *,
+.profile-admin-sidebar,
+.profile-admin-main {
+  overflow-x: hidden !important;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE y Edge */
+}
+
+/* Estilos específicos para el body cuando está en la página de perfil */
+body.profile-admin-body {
+  overflow: hidden !important;
+  height: 100vh !important;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE y Edge */
+}
+
+body.profile-admin-body::-webkit-scrollbar {
+  width: 0px !important;
+  background: transparent !important;
+  display: none !important;
+}
+
+/* Ocultar scrollbar del navegador completo */
+html.profile-admin-body {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+html.profile-admin-body::-webkit-scrollbar {
+  display: none !important;
+}
+
+.profile-admin-page::-webkit-scrollbar,
+.profile-admin-sidebar::-webkit-scrollbar,
+.profile-admin-main::-webkit-scrollbar {
+  width: 0px !important;
+  background: transparent !important;
+  display: none !important;
+}
+
+/* Estilo específico para el contenedor principal */
+.profile-admin-page {
+  min-height: 100vh;
+  background: #d9d9d9;
+  overflow-x: hidden !important;
+  overflow-y: auto;
+}
+
+.profile-admin-page::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Asegurar que el sidebar no cause overflow */
+.profile-admin-sidebar {
+  overflow-y: auto;
+  overflow-x: hidden !important;
+}
+
+.profile-admin-sidebar::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Asegurar que el contenido principal no cause overflow */
+.profile-admin-main {
+  overflow-x: hidden !important;
+  overflow-y: auto;
+}
+
+.profile-admin-main::-webkit-scrollbar {
+  display: none !important;
+}
