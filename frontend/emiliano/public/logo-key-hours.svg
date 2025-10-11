@@ -1,0 +1,16 @@
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="keyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Key icon -->
+  <rect x="5" y="15" width="8" height="10" rx="2" fill="url(#keyGradient)"/>
+  <circle cx="15" cy="20" r="3" fill="url(#keyGradient)"/>
+  
+  <!-- Text -->
+  <text x="25" y="16" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">KEY</text>
+  <text x="25" y="28" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">HOURS</text>
+</svg>

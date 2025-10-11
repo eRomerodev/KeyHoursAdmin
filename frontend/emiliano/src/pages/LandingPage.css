@@ -1,0 +1,14 @@
+/* Landing Page Styles - Optimized */
+
+.landing-page {
+  min-height: 100vh;
+  background: radial-gradient(1200px 700px at 75% -10%, rgba(76,76,255,0.35), transparent 60%), 
+              linear-gradient(110deg, #07070a 0%, #0f1020 25%, #18194a 55%, #2c2eff 100%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .landing-page {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%);
+  }
+}

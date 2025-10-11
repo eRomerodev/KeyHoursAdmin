@@ -1,0 +1,161 @@
+.sidebar {
+  width: 200px;
+  background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  min-height: 100vh;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 16px;
+}
+
+.sidebar-user {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-icon {
+  font-size: 16px;
+}
+
+.user-name {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-item.active {
+  background: var(--light-blue);
+}
+
+.sidebar-icon {
+  font-size: 16px;
+}
+
+.sidebar-label {
+  font-size: 14px;
+}
+
+.sidebar-add-btn {
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.add-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--light-blue);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.add-btn:hover {
+  background: var(--accent-blue);
+  transform: scale(1.05);
+}
+
+.add-icon {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sidebar-back {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.back-icon {
+  color: var(--white);
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    padding: 16px 0;
+  }
+  
+  .sidebar-content {
+    padding: 0 8px;
+  }
+  
+  .sidebar-user {
+    display: none;
+  }
+  
+  .sidebar-label {
+    display: none;
+  }
+  
+  .sidebar-item {
+    justify-content: center;
+    padding: 12px 8px;
+  }
+  
+  .user-name {
+    display: none;
+  }
+}
