@@ -1,10 +1,6 @@
 # KeyHours - Frontend (Joshua)
 
-## 🎯 Tu Responsabilidad
-
-Como parte del equipo de frontend, tu responsabilidad principal es trabajar en **componentes principales** y **páginas de administrador**.
-
-## 📁 Archivos Principales que Tienes
+## 📁 Archivos Principales
 
 ### 🧩 Componentes Principales (src/components/)
 - **`DashboardAdminKeyHours.tsx`** - Dashboard principal de administrador
@@ -50,7 +46,7 @@ npm run build
 npm test
 ```
 
-## 📋 Tareas Sugeridas
+## 📋 Tareas a progresar
 
 1. **Mejorar UX del dashboard de admin**
 2. **Optimizar formularios de gestión**
@@ -64,5 +60,3 @@ Emiliano está trabajando en **componentes de estudiante** y **servicios**. Coor
 - Consistencia en el diseño
 - Reutilización de componentes
 - Integración de servicios
-
-¡Tienes TODO el proyecto para trabajar! 🎉
