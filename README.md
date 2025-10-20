@@ -96,33 +96,40 @@ git --version
 
 ### 📥 **PASO 2: DESCARGAR EL REPOSITORIO - INSTRUCCIONES EXACTAS**
 
-**PASO 2.1: OPCIÓN A - SI TIENES EL ARCHIVO ZIP**
+**PASO 2.1: OPCIÓN A - CLONAR DESDE GITHUB (RECOMENDADO)**
 
-1. **Localizar el archivo ZIP:**
-   - Busca el archivo `Key-hours.zip` o similar en tu computadora
-   - Si no lo tienes, pide que te lo envíen por correo o descárgalo desde GitHub
+```powershell
+# Navegar al escritorio
+cd C:\Users\$env:USERNAME\Desktop
+
+# Clonar el repositorio KeyHoursAdmin
+git clone https://github.com/eRomerodev/KeyHoursAdmin.git
+
+# Renombrar la carpeta para que coincida con el proyecto
+Rename-Item "KeyHoursAdmin" "Key hours"
+
+# Navegar al proyecto
+cd "Key hours"
+```
+
+**PASO 2.2: OPCIÓN B - DESCARGAR ZIP DESDE GITHUB**
+
+1. **Ir al repositorio GitHub:**
+   - Ve a: `https://github.com/eRomerodev/KeyHoursAdmin`
+   - Haz clic en el botón verde "Code"
+   - Selecciona "Download ZIP"
 
 2. **Extraer el archivo:**
+   - Busca el archivo `KeyHoursAdmin-main.zip` en tu carpeta de descargas
    - Haz clic derecho en el archivo ZIP
    - Selecciona "Extraer todo..."
    - Selecciona como destino: `C:\Users\%USERNAME%\Desktop\`
    - Marca "Mostrar archivos extraídos cuando termine"
    - Haz clic en "Extraer"
 
-3. **Verificar la extracción:**
-   - Debe aparecer una carpeta llamada "Key hours" (con espacio) en tu escritorio
-   - La carpeta debe contener: `manage.py`, `package.json`, `requirements.txt`, `src/`, etc.
-
-**PASO 2.2: OPCIÓN B - SI TIENES ACCESO AL REPOSITORIO GIT**
-
-```powershell
-# Navegar al escritorio
-cd C:\Users\$env:USERNAME\Desktop
-
-# Clonar el repositorio (reemplaza [URL] con la URL real)
-git clone [URL_DEL_REPOSITORIO]
-cd "Key hours"
-```
+3. **Renombrar la carpeta:**
+   - Renombra la carpeta `KeyHoursAdmin-main` a `Key hours`
+   - La carpeta debe contener: `manage.py`, `package.json`, `requirements.txt`, las 6 carpetas principales, etc.
 
 ### 📁 **PASO 3: PREPARAR EL PROYECTO - COMANDOS EXACTOS**
 
@@ -144,11 +151,9 @@ dir
 - `manage.py`
 - `package.json`
 - `requirements.txt`
-- `src/` (carpeta)
-- `applications/` (carpeta)
-- `projects/` (carpeta)
-- `users/` (carpeta)
-- `hours/` (carpeta)
+- `README.md`
+- Las 6 carpetas principales: `# Componentes principales y páginas de admin`, `Backend`, `Diseño`, `Diseño2`, `frontend`, `marco`
+- Y otros archivos del proyecto
 
 **SI NO VES ESTOS ARCHIVOS:**
 - Verifica que la carpeta se llama exactamente "Key hours" (con espacio)
@@ -527,15 +532,12 @@ Key hours/
 ├── 📂 public/                   # Archivos públicos
 │   ├── index.html               # HTML principal
 │   └── logo-key-hours.svg       # Logo SVG
-├── 📂 partes/                   # Distribución por equipos
-│   ├── 📂 frontend/
-│   │   ├── 📂 joshua/           # Trabajo de Joshua
-│   │   └── 📂 emiliano/         # Trabajo de Emiliano
-│   ├── 📂 backend/
-│   │   ├── 📂 david/            # Trabajo de David
-│   │   └── 📂 marco/            # Trabajo de Marco
-│   └── 📂 diseño-pm/
-│       └── 📂 adriana/          # Trabajo de Adriana
+├── 📂 # Componentes principales y páginas de admin    # Trabajo de Joshua (Frontend)
+├── 📂 Backend/david                                  # Trabajo de David (Backend)
+├── 📂 Diseño/adriana                                 # Trabajo de Adriana (Diseño y PM)
+├── 📂 Diseño2/adriana                                # README de Adriana (Documentación)
+├── 📂 frontend/emiliano                              # Trabajo de Emiliano (Frontend)
+├── 📂 marco                                          # Trabajo de Marco (Backend)
 ├── 📄 manage.py                 # Script principal Django
 ├── 📄 requirements.txt          # Dependencias Python
 ├── 📄 package.json              # Dependencias Node.js
@@ -546,36 +548,68 @@ Key hours/
 ## 👥 ESTRUCTURA DEL EQUIPO - RESPONSABILIDADES EXACTAS
 
 ### **Frontend (50% - 50%):**
-- **Joshua**: Componentes principales y páginas de administrador
+- **Joshua**: `# Componentes principales y páginas de admin`
   - DashboardAdminKeyHours.tsx
   - ProfileAdminKeyHours.tsx
   - NewProjectKeyHours.tsx
   - ProjectDetailKeyHours.tsx
   - StudentsScreenKeyHours.tsx
+  - Componentes principales y páginas de administrador
 
-- **Emiliano**: Componentes de estudiante y servicios
+- **Emiliano**: `frontend/emiliano`
   - LoginForm.tsx, UnifiedLogin.tsx
   - ApplicationForm.tsx
   - KeyHoursHero.tsx, MissionVision.tsx
   - StudentDashboard.tsx
   - ConvocatoriasPage.tsx
+  - Componentes de estudiante y servicios
 
 ### **Backend (50% - 50%):**
-- **David**: Módulos Users y Projects
-  - users/models.py, users/views.py, users/serializers.py
+- **Marco**: `marco` (Módulo Projects - Gestión de proyectos)
   - projects/models.py, projects/views.py, projects/serializers.py
+  - Implementación de clase Proyecto con métodos crearProyecto(), editarProyecto(), asignarCupos()
+  - Persistencia de datos en base de datos SQLite
+  - Gestión de convocatorias y asignación de cupos
+  - Control de visibilidad y estados de proyectos
+  - APIs REST para CRUD de proyectos y gestión de miembros
+  - Validaciones de fechas y límites de participantes
+  - Sistema de requisitos y documentos de proyectos
+  - Estadísticas y reportes de proyectos
+  - Gestión de categorías de proyectos
+  - Control de asignación automática/manual de horas
+  - Métodos de dominio para encapsulación POO
+  - Check Point 1: Implementación completa de gestión de proyectos
+  - Check Point 2: Mejoras pendientes en encapsulación y persistencia
 
-- **Marco**: Módulos Applications y Hours
-  - applications/models.py, applications/views.py, applications/serializers.py
+- **David**: `Backend/david` (Módulos Hours y Applications - Horas sociales + validación admin)
   - hours/models.py, hours/views.py, hours/serializers.py
+  - applications/models.py, applications/views.py, applications/serializers.py
+  - Implementación de clase RegistroHora con métodos registrarHora(), validarHora()
+  - Vinculación de registros con estudiantes y proyectos
+  - Sistema de validación de horas por administradores
+  - Gestión de aplicaciones y seguimiento de progreso
+  - APIs REST para registro y validación de horas
+  - Validaciones de tiempo y estados de aplicación
+  - Sistema de notificaciones y reportes de horas
+  - Gestión de metas y resúmenes de horas
+  - Sistema de evaluaciones y documentos de aplicaciones
+  - Control de transiciones de estado y flujo de trabajo
+  - Persistencia de registros y vinculación UML
+  - Check Point 1: Implementación completa de horas sociales y validación
+  - Check Point 2: Mejoras pendientes en propagación automática y validaciones
 
 ### **Diseño y PM (100%):**
-- **Adriana**: CSS, assets, documentación y configuración
+- **Adriana**: `Diseño/adriana` (CSS, assets, documentación y configuración)
   - src/styles/smooth-animations.css
   - src/index.css
   - public/logo-key-hours.svg
   - package.json, tailwind.config.js
   - tsconfig.json
+  - postcss.config.js
+  - README.md (documentación del proyecto)
+
+- **Adriana**: `Diseño2/adriana` (README de diseño)
+  - Documentación específica de diseño y project management
 
 ## 🔧 COMANDOS ÚTILES - COMANDOS EXACTOS
 
@@ -675,7 +709,7 @@ $env:PORT=3001; npm start
 1. **Seguir pasos de instalación** exactamente como se indican arriba
 2. **Verificar que ambas aplicaciones corren** (Django en 8000, React en 3000)
 3. **Probar credenciales** de admin y estudiante
-4. **Revisar carpeta `partes/`** para evaluación individual del trabajo
+4. **Revisar las 6 carpetas principales** del repositorio KeyHoursAdmin para evaluación individual del trabajo
 5. **Explorar funcionalidades** navegando por la aplicación
 
 ### **URLs de Evaluación - URLs EXACTAS:**
@@ -692,8 +726,9 @@ $env:PORT=3001; npm start
 - ✅ Sistema de autenticación JWT robusto
 - ✅ API REST bien estructurada y documentada
 - ✅ Código limpio, comentado y bien organizado
-- ✅ Distribución equitativa del trabajo en equipo
+- ✅ Distribución equitativa del trabajo en equipo (6 carpetas principales)
 - ✅ Interfaz de usuario moderna y profesional
+- ✅ Estructura del repositorio KeyHoursAdmin organizada por miembros
 
 ### **Contacto para Soporte:**
 Si hay problemas técnicos durante la evaluación, contactar al equipo de desarrollo.
