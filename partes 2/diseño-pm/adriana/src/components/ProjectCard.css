@@ -1,0 +1,131 @@
+.project-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.project-menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-dots {
+  color: var(--gray);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.applied {
+  background: #fbbf24;
+  color: #92400e;
+}
+
+.status-badge.approved {
+  background: #10b981;
+  color: white;
+}
+
+.status-badge.rejected {
+  background: #ef4444;
+  color: white;
+}
+
+.status-badge.completed {
+  background: #6366f1;
+  color: white;
+}
+
+.project-card-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-color-block {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-footer {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.project-name {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Variantes de color específicas */
+.project-card-purple .project-color-block {
+  background: #9c27b0;
+}
+
+.project-card-blue .project-color-block {
+  background: #2196f3;
+}
+
+.project-card-cyan .project-color-block {
+  background: #00bcd4;
+}
+
+.project-card-green .project-color-block {
+  background: #4caf50;
+}
+
+.project-card-red .project-color-block {
+  background: #f44336;
+}
+
+.project-card-pink .project-color-block {
+  background: #e91e63;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card {
+    min-height: 100px;
+    padding: 12px;
+  }
+  
+  .project-color-block {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .project-name {
+    font-size: 12px;
+  }
+}

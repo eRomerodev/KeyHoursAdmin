@@ -1,0 +1,166 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: var(--white);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-landing {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+.navbar-landing .navbar-left {
+  background: transparent !important;
+}
+
+.navbar-landing .navbar-logo {
+  background: transparent !important;
+}
+
+.navbar-dashboard {
+  background: var(--white);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  background: transparent !important;
+}
+
+.navbar-logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  background: transparent !important;
+}
+
+/* Asegurar que el logo se vea bien en fondos oscuros */
+.navbar-landing .navbar-logo {
+  background: transparent !important;
+}
+
+.navbar-landing .navbar-logo img {
+  filter: saturate(0%) brightness(0) invert(1) !important;
+  opacity: 1 !important;
+  background: transparent !important;
+  mix-blend-mode: normal !important;
+  background-color: transparent !important;
+}
+
+.navbar-institution {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.institution-separator {
+  color: var(--gray);
+  font-weight: 300;
+}
+
+.institution-name {
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-login-btn {
+  background: transparent;
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar-login-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-dashboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-welcome {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.navbar-logout-btn {
+  background: transparent !important;
+  color: var(--black) !important;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.navbar-logout-btn:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Estilos específicos para navbar en modo landing (fondo oscuro) */
+.navbar-landing .navbar-logout-btn {
+  color: var(--white) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.navbar-landing .navbar-logout-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+  
+  .navbar-institution {
+    display: none;
+  }
+  
+  .navbar-welcome {
+    font-size: 14px;
+  }
+  
+  .institution-name {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-welcome {
+    display: none;
+  }
+}

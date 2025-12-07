@@ -1,0 +1,111 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo-key {
+  font-weight: 700;
+  color: var(--black);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.logo-hours {
+  background: #2196F3;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Variantes de tamaño */
+.logo-small .logo-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.logo-small .logo-key {
+  font-size: 14px;
+}
+
+.logo-small .logo-hours {
+  font-size: 0.7em;
+  padding: 1px 6px;
+}
+
+.logo-medium .logo-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-medium .logo-key {
+  font-size: 18px;
+}
+
+.logo-medium .logo-hours {
+  font-size: 0.8em;
+  padding: 2px 8px;
+}
+
+.logo-large .logo-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-large .logo-key {
+  font-size: 24px;
+}
+
+.logo-large .logo-hours {
+  font-size: 0.9em;
+  padding: 3px 10px;
+}
+
+/* Variante blanca */
+.logo-white .logo-key {
+  color: var(--white);
+}
+
+.logo-white .logo-icon svg {
+  fill: var(--white);
+}
+
+/* Estilos para logo en modo blanco (fondos oscuros) */
+.logo-white {
+  filter: saturate(0%) brightness(0) invert(1) !important;
+  mix-blend-mode: normal !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.logo-white-container {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-medium .logo-key {
+    font-size: 16px;
+  }
+  
+  .logo-medium .logo-hours {
+    font-size: 0.7em;
+    padding: 1px 6px;
+  }
+}
